@@ -1,5 +1,5 @@
-#ifndef LEETCODE_TEMPLATE_H
-#define LEETCODE_TEMPLATE_H
+#ifndef INTERVIEWS_TEMPLATE_H
+#define INTERVIEWS_TEMPLATE_H
 
 namespace Solution
 {

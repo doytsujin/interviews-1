@@ -31,9 +31,10 @@ Here are my solutions to the following interview questions:
 9. [submatrix.cpp](src/submatrix.cpp) - Given an n x m matrix of numbers A, find the largest submatrix whose sum is under a given value b.
 
 10. [connected.cpp](src/connected.cpp) - You are given an arbitrary matrix containing 0's and 1's. A connected component is a collection of cells which are all 1's and which are all connected to each other by steps in one of the four horizontal or vertical directions. Count the number of connected components of your matrix. Follow up:
+  - Find the centroid of each connected component.
+  - What if retrieving or setting the cell value is expensive?
 
-- Find the centroid of each connected component.
-- What if retrieving or setting the cell value is expensive?
+11. [countPrimes.cpp](src/countPrimes.cpp) - Count the number of prime numbers up to a non-negative number, ***n***.
 
 ## Tests
 

@@ -7,48 +7,18 @@
 
 using namespace std;
 
-class Solution
+class Challenge
 {
 public:
-    bool solution(bool throwError)
+    bool solution(bool value)
     {
-        if (throwError)
-        {
-            throw "No solution found";
-        }
-        return throwError;
+        return value;
     }
 };
 
-TEST(Solution, CorrectTest)
+TEST(Challenge, CorrectTest)
 {
-    Solution solution;
+    Challenge challenge;
     bool correct = true;
-
-    try
-    {
-        ASSERT_EQ(solution.solution(false), correct);
-    }
-    catch (const exception &e)
-    {
-        std::cout << "Solution.CorrectTest: Exception - " << e.what() << endl;
-    }
-}
-
-TEST(Solution, NoSolution)
-{
-    bool exceptionThrown = false;
-    bool ignoreAnswer = true;
-
-    try
-    {
-        Solution solution;
-        ignoreAnswer = solution.solution(true);
-    }
-    catch (const exception &e)
-    {
-        exceptionThrown = true;
-    }
-
-    ASSERT_EQ(exceptionThrown, true);
+    ASSERT_EQ(challenge.solution(correct), correct);
 }
