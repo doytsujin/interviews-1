@@ -29,10 +29,10 @@ public:
         if (records.empty())
             return -1;
 
-        int minYear = 10000;
-        int maxYear = -1;
-
-        map<int, int> years;
+        map<int, int> births;
+        map<int, int> deaths;
+        int firstYear = 10000;
+        int lastYear = 0;
 
         for (auto r = records.begin(); r != records.end(); ++r)
         {
@@ -43,26 +43,29 @@ public:
             if (r->death < 0)
                 return -1;
 
-            if (r->birth < minYear)
-                minYear = r->birth;
-            if (r->death > maxYear)
-                maxYear = r->death;
+            if (r->birth < firstYear)
+                firstYear = r->birth;
+            if (r->death > lastYear)
+                lastYear = r->death;
 
-            for (int y = r->birth; y <= r->death; y++)
-            {
-                years[y]++;
-            }
+            // Each time a birth is recorded, add a + to the year
+            births[r->birth]++;
+            // Each time a death is recorded, add a - to the year
+            deaths[r->death]--;
         }
 
         int count = 0;
+        int mostCount = 0;
         int mostYear = -1;
-        for (int y = minYear; y <= maxYear; y++)
+        for (int y = firstYear; y <= lastYear; y++)
         {
-            if (years[y] > count)
+            count += births[y];
+            if (count > mostCount)
             {
+                mostCount = count;
                 mostYear = y;
-                count = years[y];
             }
+            count += deaths[y];
         }
 
         return mostYear;
