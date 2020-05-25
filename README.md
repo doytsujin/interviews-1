@@ -8,7 +8,7 @@ Here are my solutions to the following interview questions:
 
 2. reflection - Write a function that takes as input a binary tree and returns the "reflection" of that tree. For every path in the original tree from the root (e.g., RLLRRL) there should be a reflected path in the new tree (e.g., LRRLLR)
 
-3. boarding - You are taking a trip from one city to another with several layovers and you have a separate boarding pass for each leg. For example, `JFK -> ATL -> LAX -> SFO`. Each boarding pass has a start and end city for that leg of the trip. Write a function where the input is a list of boarding passes for a trip and the output is the boarding passes sorted in order.
+3. [boarding.cpp](src/boarding.cpp) - You are taking a trip from one city to another with several layovers and you have a separate boarding pass for each leg. For example, `JFK -> ATL -> LAX -> SFO`. Each boarding pass has a start and end city for that leg of the trip. Write a function where the input is a list of boarding passes for a trip and the output is the boarding passes sorted in order.
    `Example:`  
    `Input: {'s': ATL, 'e': LAX}, {'s': LAX, 'e': SFO}, {'s': JFK, 'e': ATL}`  
    `Output: {'s': JFK, 'e': ATL}, {'s': ATL, 'e': LAX}, {'s': LAX, 'e': SFO}`
