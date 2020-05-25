@@ -15,7 +15,7 @@ Here are my solutions to the following interview questions:
 
 4. football - In football you can score a touchdown to get 7 points, a field goal to get 3 points, or a safety to get 2 points. Given a final score, compute all the different ways it could be achieved. Assume the order of the scores doesn't matter (so a touchdown and a safety is the same as a safety and a touchdown).
 
-5. correspondence - You are given a mapping of letters to numbers `a -> 1 b -> 2 c -> 3 ... z -> 26` Given a number, count the number of ways that it can be interpreted as a string of characters by reversing this correspondence. (FB)
+5. correspondence - You are given a mapping of letters to numbers `a -> 1 b -> 2 c -> 3 ... z -> 26` Given a number, count the number of ways that it can be interpreted as a string of characters by reversing this correspondence.
    `For example:`  
    `123 -> 1 + 23 = a + (some letter)`  
    `123 -> 12 + 3 = (some letter) + c`  
