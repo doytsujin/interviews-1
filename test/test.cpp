@@ -1,9 +1,10 @@
 //
-// Test executable for LeetCode problems
+// Test executable for Interviews problems
 //
 #include <iostream>
 #include <vector>
 
+// #include "sample.h"
 #include <gtest/gtest.h>
 #include <gflags/gflags.h>
 
@@ -13,8 +14,8 @@
 using namespace std;
 
 namespace lesson
-{ 
-    namespace test 
+{
+    namespace test
     {
         // Add utility functions here
         /*
@@ -33,46 +34,46 @@ namespace lesson
             return A;
         }
         */
-    }
-}
+    } // namespace test
+} // namespace lesson
 
 /*
-TEST(LessonTest, BruteForce) 
+TEST(SampleTest, BruteForce) 
 {
     ASSERT_EQ(lesson::bruteForce(A), 0);
 }
 
-TEST(LessonTest, Edge) 
+TEST(SampleTest, Edge) 
 {
     ASSERT_EQ(lesson::bruteForce(A), lesson::solution(A));
 }
 
-TEST(LessonTest, Sample) 
+TEST(SampleTest, Sample) 
 {
     ASSERT_EQ(lesson::bruteForce(A), lesson::solution(A));
 }
 
-TEST(LessonTest, Empty) 
+TEST(SampleTest, Empty) 
 {
     ASSERT_EQ(lesson::bruteForce(A), lesson::solution(A));
 }
 
-TEST(LessonTest, Zeroes) 
+TEST(SampleTest, Zeroes) 
 {
     ASSERT_EQ(lesson::bruteForce(A), lesson::solution(A));
 }
 
-TEST(LessonTest, Maximum) 
+TEST(SampleTest, Maximum) 
 {
     ASSERT_EQ(lesson::bruteForce(A), lesson::solution(A));
 }
 
-TEST(LessonTest, Minimum) 
+TEST(SampleTest, Minimum) 
 {
     ASSERT_EQ(lesson::bruteForce(A), lesson::solution(A));
 }
 
-TEST(LessonTest, MaxRandom) 
+TEST(SampleTest, MaxRandom) 
 {
     ASSERT_EQ(lesson::bruteForce(A), lesson::solution(A));
 }
