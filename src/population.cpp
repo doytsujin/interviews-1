@@ -31,6 +31,7 @@ public:
 
         map<int, int> births;
         map<int, int> deaths;
+        map<int, int> years;
         int firstYear = 10000;
         int lastYear = 0;
 
@@ -50,22 +51,24 @@ public:
 
             // Each time a birth is recorded, add a + to the year
             births[r->birth]++;
+            years[r->birth] = 1;
             // Each time a death is recorded, add a - to the year
             deaths[r->death]--;
+            years[r->death] = 1;
         }
 
         int count = 0;
         int mostCount = 0;
         int mostYear = -1;
-        for (int y = firstYear; y <= lastYear; y++)
+        for (auto y = years.begin(); y != years.end(); ++y)
         {
-            count += births[y];
+            count += births[y->first];
             if (count > mostCount)
             {
                 mostCount = count;
-                mostYear = y;
+                mostYear = y->first;
             }
-            count += deaths[y];
+            count += deaths[y->first];
         }
 
         return mostYear;
