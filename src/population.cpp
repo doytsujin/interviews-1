@@ -16,14 +16,12 @@ public:
         int death;
     };
 
-    // Limits
-    // - Min year is 0, Max year is 10000
-    //
     // Instructions:
     // - If empty, should return -1
     // - If any record has death before birth, return -1
     // - If any record has an invalid year, return -1
     // - If there are multiple years with the same number, return the first year
+    // - Year should be positive integer
     int solution(vector<RecordStruct> records)
     {
         if (records.empty())
@@ -31,9 +29,9 @@ public:
 
         map<int, int> births;
         map<int, int> deaths;
+
+        // Years tracks where I have data points
         map<int, int> years;
-        int firstYear = 10000;
-        int lastYear = 0;
 
         for (auto r = records.begin(); r != records.end(); ++r)
         {
@@ -43,11 +41,6 @@ public:
                 return -1;
             if (r->death < 0)
                 return -1;
-
-            if (r->birth < firstYear)
-                firstYear = r->birth;
-            if (r->death > lastYear)
-                lastYear = r->death;
 
             // Each time a birth is recorded, add a + to the year
             births[r->birth]++;
